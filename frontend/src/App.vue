@@ -1,23 +1,25 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import DemoButtons from "./components/DemoButtons.vue";
+import MainNav from "@/components/MainNav.vue";
+import About from "@/components/pages/about.vue";
+import Home from "@/components/pages/Home.vue";
+import MainFooter from "@/components/MainFooter.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <v-app class="rounded rounded-md">
+    <MainNav></MainNav>
 
-    <div class="wrapper">
-      <HelloWorld msg="Just trying smt out!" />
-      <br>
-      <DemoButtons/>
-    </div>
-  </header>
+    <v-main class="d-flex align-center justify-center">
+      <v-container fluid>
+        <v-fade-transition>
+          <router-view></router-view>
+        </v-fade-transition>
+      </v-container>
+    </v-main>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <MainFooter></MainFooter>
+  </v-app>
 </template>
 
 <style scoped>
