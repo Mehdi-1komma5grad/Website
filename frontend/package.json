@@ -8,10 +8,13 @@
     "watch-frontend": "vite --host 0.0.0.0 --port 4173"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "vue": "^3.2.38",
-    "dotenv": "^16.0.3"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.4.2"
   },
   "devDependencies": {
+    "@mdi/font": "^7.3.67",
     "@vitejs/plugin-vue": "^3.0.3",
     "vite": "^3.0.9"
   }
