@@ -6,7 +6,10 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   server:{
-    port: 80
+    port: 80,
+    watch: {
+      usePolling: true,
+    }
   },
   envDir: "../",
   plugins: [vue()],
