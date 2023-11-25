@@ -1,5 +1,5 @@
 <script>
-import { ref, onMounted, getCurrentInstance } from "vue";
+import { ref, onMounted, getCurrentInstance, transformVNodeArgs } from "vue";
 import { useTheme } from "vuetify/lib/framework";
 
 export default {
@@ -12,7 +12,9 @@ export default {
 
     function changeTheme() {
       darkmode.value = !darkmode.value;
-      theme.global.name.value = darkmode.value ? "light" : "dark";
+      theme.global.name.value = darkmode.value
+        ? "customDarkTheme"
+        : "customLightTheme";
     }
 
     onMounted(() => {
@@ -48,8 +50,8 @@ export default {
 
 <template>
   <div>
-    <v-app-bar dense color="fff" dark>
-      <v-btn icon="mdi-home" color="cyan" :to="Home.path"></v-btn>
+    <v-app-bar dense color="primary">
+      <v-btn icon="mdi-home" :to="Home.path"></v-btn>
       <v-tabs class="navbar">
         <v-tab :to="About.path">{{ About.name }} </v-tab>
         <v-tab :to="Stammbaum.path">{{ Stammbaum.name }} </v-tab>
@@ -57,12 +59,11 @@ export default {
       <v-spacer></v-spacer>
       <v-btn icon @click="changeTheme">
         <v-icon
-          :icon="darkmode ? 'mdi-weather-night' : 'mdi-weather-sunny'"
+          :icon="darkmode ? 'mdi-weather-sunny' : 'mdi-weather-night'"
         ></v-icon>
       </v-btn>
-      <v-btn variant="outlined" color="cyan" :to="Login.path">{{
-        Login.name
-      }}</v-btn>
+
+      <v-btn variant="outlined" :to="Login.path">{{ Login.name }}</v-btn>
     </v-app-bar>
   </div>
 </template>

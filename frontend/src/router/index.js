@@ -4,6 +4,7 @@ import About from "../components/pages/about.vue";
 import Login from "../components/pages/Login.vue";
 import FamilyTree from "../components/pages/FamilyTree.vue";
 import NotFound from "../components/pages/NotFound.vue";
+import Register from "@/components/pages/Register.vue";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: "/familytree",
     name: "FamilyTree",
     component: FamilyTree,
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
   },
 ];
 
