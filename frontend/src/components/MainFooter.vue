@@ -1,13 +1,14 @@
 <template>
-  <v-footer color="cyan" height="auto" class="d-flex flex-column">
+  <v-footer color="primary" height="auto" class="secondary d-flex flex-column">
     <v-card
       flat
-      color="cyan"
       tile
-      class="cyan lighten-1 white--text text sx-center flex"
+      color="primary"
+      class="lighten-1 white--text text sx-center flex"
     >
       <v-spacer></v-spacer>
       <v-btn
+        color="second"
         v-for="icon in icons"
         :key="icon"
         class="mx-4"
@@ -17,7 +18,7 @@
         :aria-label="getSocialMediaLabel(icon)"
       ></v-btn>
     </v-card>
-    <v-card flat color="cyan" class="white--text text-center">
+    <v-card flat color="primary" class="year">
       {{ new Date().getFullYear() }}
     </v-card>
   </v-footer>
@@ -55,5 +56,9 @@ export default {
   justify-content: center;
   align-items: stretch;
   align-content: center;
+}
+.year {
+  margin-top: auto;
+  text-color: white;
 }
 </style>

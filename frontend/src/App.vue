@@ -1,5 +1,4 @@
 <script setup>
-import DemoButtons from "./components/DemoButtons.vue";
 import MainNav from "@/components/MainNav.vue";
 import About from "@/components/pages/about.vue";
 import Home from "@/components/pages/Home.vue";
@@ -7,14 +6,13 @@ import MainFooter from "@/components/MainFooter.vue";
 </script>
 
 <template>
-  <v-app class="rounded rounded-md">
+  <v-app>
     <MainNav></MainNav>
-
-    <v-main class="d-flex align-center justify-center">
+    <v-main class="align-center justify-center">
       <v-container fluid>
-        <v-fade-transition>
-          <router-view></router-view>
-        </v-fade-transition>
+        <!--       <v-fade-transition> -->
+        <router-view></router-view>
+        <!--        </v-fade-transition> -->
       </v-container>
     </v-main>
 
