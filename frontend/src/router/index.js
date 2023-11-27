@@ -5,6 +5,7 @@ import Login from "../components/pages/Login.vue";
 import FamilyTree from "../components/pages/FamilyTree.vue";
 import NotFound from "../components/pages/NotFound.vue";
 import Register from "@/components/pages/Register.vue";
+import Profile from "@/components/pages/Profile.vue";
 
 const routes = [
   {
@@ -38,6 +39,12 @@ const routes = [
     name: "Register",
     component: Register,
   },
+  {
+    path: "/profile",
+    name: "/Profile",
+    component: Profile,
+  },
+
 ];
 
 const router = createRouter({
