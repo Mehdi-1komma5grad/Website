@@ -3,6 +3,7 @@ import MainNav from "@/components/MainNav.vue";
 import About from "@/components/pages/about.vue";
 import Home from "@/components/pages/Home.vue";
 import MainFooter from "@/components/MainFooter.vue";
+import FamilyTree from "@/components/pages/FamilyTree.vue"
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import MainFooter from "@/components/MainFooter.vue";
     <v-main class="align-center justify-center">
       <v-container fluid>
         <!--       <v-fade-transition> -->
-        <router-view></router-view>
+        <FamilyTree></FamilyTree>
         <!--        </v-fade-transition> -->
       </v-container>
     </v-main>
