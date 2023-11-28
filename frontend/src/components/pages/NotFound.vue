@@ -4,24 +4,25 @@
       <v-col>
         <h1>Seite nicht gefunden</h1>
         <p>Überprüfe die URL</p>
-        <v-btn to="/home" class="mt-4">kehre zur Startseite zurück </v-btn>
+        <v-btn to="/" class="mt-4">kehre zur Startseite zurück </v-btn>
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <v-img
-          src="/images/not-found.gif"
-          width="400"
-          height="400"
-          alt="not found"
-        ></v-img>
-      </v-col>
+      <v-col><img :src="notFoundImage" alt="Not Found Image" /> </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
-export default {};
+import notFoundImage from "/images/not-found.gif";
+
+export default {
+  data() {
+    return {
+      notFoundImage: notFoundImage,
+    };
+  },
+};
 </script>
 
 <style>

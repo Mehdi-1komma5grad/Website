@@ -1,25 +1,18 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12">
-        <v-card>
-          <v-card-title> Family Tree </v-card-title>
-          <v-card-text>
-            <!-- Your family tree content goes here -->
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+    <DisplayFamilyTree />
   </v-container>
 </template>
 
 <script>
+import DisplayFamilyTree from "@/components/DisplayFamilyTree.vue";
+
 export default {
   name: "Familytree",
-  // Your component logic goes here
+  components: {
+    DisplayFamilyTree,
+  },
 };
 </script>
 
-<style scoped>
-/* Your component styles go here */
-</style>
+<style scoped></style>
